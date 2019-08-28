@@ -1,0 +1,10 @@
+london - 51.480329, -0.166591
+newcastle - 54.984424, -1.617010
+wales - 52.742965, -3.884179
+norwich - 52.637386, 1.297832
+
+mainland box coordinates
+Top left: 54.3, -3.00
+Top right: 54.3, -0.45
+Bottom right: 50.82, -0.45
+Bottom left: 50.82, -3.00
