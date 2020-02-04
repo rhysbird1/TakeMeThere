@@ -6,10 +6,30 @@
     <script src="main.js"></script>
     <link rel="stylesheet" type="text/css" href="style.css">
 </head>
-<body>
+<body onload="pageStart()">
     <h1>TakeMeThere</h1>
     <h3>Your next destination in the hands of fate.</h3>
-    <div id="googleMap" style="width:100%;height:400px;"></div>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCi5hGoIpvVxPHDgxr7xEZhBDmlgnmMoBk&callback=myMap"></script>
+    <div class="filter-bar-wrapper">
+        <div class="filter-cb">
+            <input type="checkbox" id="cbMainland" onclick="checkboxRegion('Mainland')">Mainland
+        </div>
+        <div class="filter-cb">
+            <input type="checkbox" id="cbScotland" onclick="checkboxRegion('Scotland')">Scotland
+        </div>
+        <div class="filter-cb">
+            <input type="checkbox" id="cbWales" onclick="checkboxRegion('Wales')">Wales
+        </div>
+        <div class="filter-cb">
+            <input type="checkbox" id="cbIreland" onclick="checkboxRegion('Ireland')">Ireland
+        </div>
+    </div>
+    <div id="googleMap" class="google-map" style="width:100%;height:400px"></div>
+    <div class="button-wrapper">
+        <input type="button" id="takeMeThereBtn" class="button tmt" value="Take Me There!" onclick="searchPlace()">
+    </div>
+    <div class="button-wrapper">
+        <input type="button" id="searchBtn" class="button srch" value="Search" onclick="createMap()">
+    </div>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCi5hGoIpvVxPHDgxr7xEZhBDmlgnmMoBk&libraries=places"></script>
 </body>
 </html>
